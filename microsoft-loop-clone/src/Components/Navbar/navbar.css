@@ -1,0 +1,68 @@
+.navbarr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 68px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .navbarr h3{
+    font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+color: #242424;
+  }
+  
+  .navbar-signin-button{
+    border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  color: #8230FF;
+  background-color: white;
+  outline: none;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+  margin-top: 10px;
+  border: 2px solid #8230FF; 
+}
+  .navbar-getstarted-button {
+    border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  color: white;
+  background-color: #8230FF;
+  outline: none;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+  margin-top: 10px;
+  border: 2px solid #8230FF; 
+  }
+  
+  .navbar-signin-button:hover{
+    background-color: rgba(130, 48, 255, 0.2); 
+    transition: background-color 1s ease;  
+  }
+  .navbar-getstarted-button:hover {
+    background-color: rgb(105, 29, 220); 
+    transition: background-color 1s ease;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar-getstarted-button {
+      border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 7px;
+    margin-top: 5px;
+    font-size: 12px;
+
+    }
+  }
