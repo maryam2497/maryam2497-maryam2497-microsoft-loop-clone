@@ -66,7 +66,7 @@ export const Intro = () => {
                   transform,
                 }}
               >
-                <img src={teams} alt="Teams Avatar" className="me-2" />
+                <img src={teams} alt="Teams Avatar" className="me-2 team" />
                 <span className="intro-chat chat-box">
                   Are we tracking this somewhere?
                 </span>
@@ -115,7 +115,7 @@ export const Intro = () => {
           </div>
         </div>
 
-        <div className="container screen-container pb-md-5 pb-2">
+        <div className="container screen-container hide pb-md-5 pb-2">
           <div className="d-flex pb-md-5 pb-2">
             <img src={sidebar} className="img-fluid" alt="" />
 
@@ -132,8 +132,8 @@ export const Intro = () => {
       </div>
 
       {/* ----------- */}
-      <div className="pt-md-3 put-1 sync-container">
-        <div className="container col-md-8 mt-md-5 mt-2 mx-auto">
+      <div className="pt-md-3 put-1 ">
+        <div className="container col-md-8 mt-md-5 mt-2 mx-auto sync-container-bg ">
           <h1>Stay in sync without switching apps</h1>
           <p className="mt-3 mt-md-4 mb-4">
             Get more done right where you are, with Loop components that sync
@@ -141,44 +141,44 @@ export const Intro = () => {
           </p>
           <img src={syncfirstimg} className="img-fluid mt-5" alt="" />
         </div>
-        <div className="d-flex custom-mt">
-          <div className="col-md-5 ">
-            <h1 className="custom-mt">Get started,it's a breeze</h1>
-            <p>
+        <div className="d-flex custom-mt ">
+          <div className="col-lg-5 col-md-10 make-row">
+            <h1 className="custom-mt heading-font ">Get started,it's a breeze</h1>
+            <p className="subheading-font">
               Quickly kick off projects with intelligent suggestions, page
               templates, and an insert menu at your fingertips.
             </p>
           </div>
-          <div className="col-md-6">
-            <img src={syncCard1} className="img-fluid" alt="" />
+          <div className="col-lg-6 col-md-10 ">
+            <img src={syncCard1} className="img-fluid " alt="" />
           </div>
         </div>
-        <div className="d-flex custom-mt ">
-          <div className="col-md-6">
+        <div className="d-flex custom-mt  ">
+          <div className="col-lg-6 col-md-15 order-2 order-lg-1 order-md-2">
             <img src={syncCard2} className="img-fluid" alt="" />
           </div>
-          <div className="col-md-5 custom-mt">
+          <div className="col-lg-5 col-md-10 custom-mt order-1 order-lg-2 order-md-1">
             <h1>Add a new AI teammate</h1>
             <p className=" mt-md-4 mb-3">
               Co-author with AI as a group, either in a conversational back and
               forth or by directly editing the generated content.
             </p>
             <div class="row ">
-              <div class="col-md-2 mt-5 white-box1 rt-m8">
-              <img src={create} className="img-fluid col-md-3 mt-4" alt="" />
-              <h6 className="mt-2">Create</h6>
+              <div class="col-2 mt-2 mt-md-5 white-box1 rt-m8 ms-3 ">
+              <img src={create} className="img-fluid col-lg-3 col-md-3 mt-1 mt-md-4" alt="" />
+              <h6 className="mt-2 white-box-txt">Create</h6>
               </div>
-              <div class="col-md-2 mt-5 white-box1 rt-8">
-              <img src={brainstorm} className="img-fluid col-md-3 mt-4" alt="" />
-              <h6 className="mt-2">Brainstorm</h6>
+              <div class="col-2 mt-2 mt-md-5 white-box1 rt-8 ">
+              <img src={brainstorm} className="img-fluid col-md-3 mt-1 mt-md-4" alt="" />
+              <h6 className="mt-2 white-box-txt">Brainstorm</h6>
               </div>
-              <div class="col-md-2 mt-5 white-box1  rt-m8">
-              <img src={summarize} className="img-fluid col-md-3 mt-4" alt="" />
-              <h6 className="mt-2">Summarize</h6>
+              <div class="col-2 mt-2 mt-md-5 white-box1  rt-m8">
+              <img src={summarize} className="img-fluid col-md-3 mt-1 mt-md-4" alt="" />
+              <h6 className="mt-2 white-box-txt">Summarize</h6>
               </div>
-              <div class="col-md-2 mt-5 white-box1 rt-8">
-              <img src={answer} className="img-fluid col-md-3 mt-4" alt="" />
-              <h6 className="mt-2">Answer</h6>
+              <div class="col-2 mt-2 mt-md-5 white-box1 rt-8">
+              <img src={answer} className="img-fluid col-md-3 mt-1 mt-md-4" alt="" />
+              <h6 className="mt-2 white-box-txt">Answer</h6>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ export const Intro = () => {
             Prioritize, communicate, and make decisions like you're all in the
             same room.
           </p>
-          <img src={syncCard3} className="img-fluid mt-5" alt="" />
+          <img src={syncCard3} className="img-fluid col-md-8 mt-5 " alt="" />
         </div>
       </div>
     </div>
