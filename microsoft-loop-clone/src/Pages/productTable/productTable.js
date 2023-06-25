@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './productTable.css';
 const ProductTable = () => {
   const [products, setProducts] = useState([]);
   const [productName, setProductName] = useState('');
@@ -85,49 +85,52 @@ const ProductTable = () => {
 
   return (
     <>
-      <div>
-        <label htmlFor="productName">Product Name:</label>
+      <div className='add-product d-flex justify-content-center flex-wrap pt-2 pt-md-4 pb-2 pb-md-4'>
+        <div className='me-1 me-md-3'>
+
+        <label htmlFor="productName" className='me-1 me-md-3'>Product Name:</label>
         <input
           type="text"
           id="productName"
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
-        />
+          />
       </div>
-      <div>
-        <label htmlFor="productQuantity">Product Quantity:</label>
+      <div className='me-1 me-md-3'>
+        <label htmlFor="productQuantity" className='me-1 me-md-3'>Product Quantity:</label>
         <input
           type="text"
           id="productQuantity"
           value={productQuantity}
           onChange={(e) => setProductQuantity(e.target.value)}
-        />
+          />
       </div>
-      <div>
-        <label htmlFor="productPrice">Product Price:</label>
+      <div className='me-1 me-md-3'>
+        <label htmlFor="productPrice" className='me-1 me-md-3'>Product Price:</label>
         <input
           type="text"
           id="productPrice"
           value={productPrice}
           onChange={(e) => setProductPrice(e.target.value)}
-        />
+          />
       </div>
       {editingProductId ? (
         <>
-          <button onClick={updateProduct}>Save</button>
-          <button onClick={cancelEditing}>Cancel</button>
+          <button onClick={updateProduct} className='btn-save'>Save</button>
+          <button onClick={cancelEditing} className='btn-cancel'>Cancel</button>
         </>
       ) : (
-        <button onClick={addProduct}>Add</button>
-      )}
+        <button className='btn-add' onClick={addProduct}>Add</button>
+        )}
 
-      <table className="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
-        <thead>
+        </div >
+      <table className="container mb-2 mb-md-5 table table-bordered table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+        <thead className='table-head'>
           <tr>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product Quantity</th>
-            <th scope="col">Product Price</th>
-            <th scope="col">Actions</th>
+            <th >Product Name</th>
+            <th >Product Quantity</th>
+            <th >Product Price</th>
+            <th >Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -139,13 +142,13 @@ const ProductTable = () => {
               <td>
                 {editingProductId === p.id ? (
                   <>
-                    <button onClick={updateProduct}>Save</button>
-                    <button onClick={cancelEditing}>Cancel</button>
+                    <button onClick={updateProduct} className='btn-save'>Save</button>
+                    <button onClick={cancelEditing} className='btn-cancel'>Cancel</button>
                   </>
                 ) : (
                   <>
-                    <button onClick={() => startEditing(p.id)}>Edit</button>
-                    <button onClick={() => deleteProduct(p.id)}>Delete</button>
+                    <button className='me-2 btn-edit' onClick={() => startEditing(p.id)}>Edit</button>
+                    <button className='btn-delete' onClick={() => deleteProduct(p.id)}>Delete</button>
                   </>
                 )}
               </td>
